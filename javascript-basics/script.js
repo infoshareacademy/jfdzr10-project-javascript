@@ -164,13 +164,13 @@ console.log(`You have ${e} ${itemsInCartExample} in your cart.`);
 // 4. W innym wypadku wyświetl w konsoli `You cannot be a president and can't even drink beer :(`
 
 // Kolejność warunków ma znaczenie!
-console.log("ZADANIE 10");
+// console.log("ZADANIE 10");
 
-let ageOfPerson = prompt("Please enter your age");
+// let ageOfPerson = prompt("Please enter your age");
 
-if (ageOfPerson > 125 && ageOfPerson < 0) {
-  console.log("You provided incorrect age.");
-}
+// if (ageOfPerson > 125 && ageOfPerson < 0) {
+//   alert("You provided incorrect age.");
+// }
 
 // Zadanie 11.
 // Napisz funkcję `shouldTakeUmbrella`, ktore odpowie na pytanie czy wziąć ze sobą parasol.
@@ -205,15 +205,59 @@ console.log(shouldNotTakeUmbrella(weather));
 // Dla wywołania isEqual(2000, 100) zwraca liczbę false
 // Dla wywołania isEqual(100, '100') zwraca liczbę false
 
-// console.log("ZADANIE 12");
-// function isEqual (a, b) {
-//     if
-// }
+console.log("ZADANIE 12");
+function isEqual(a, b) {
+  if (a === b) {
+    return true;
+  } else if (a < b) {
+    return false;
+  } else if (a > b) {
+    return false;
+  } else return false;
+}
+console.log(isEqual(2, 2));
+console.log(isEqual(2, 10));
+console.log(isEqual(2000, 100));
+console.log(isEqual(100, "100"));
 
 // Zadanie 13.
+// 1. Napisz funkcję `canRideRollerCoaster(age, height)`:
+//    1. Jeśli ma więcej niż 18 lat oraz więcej niż 175 cm wzrostu wypisz w konsoli "Can ride!" i zwróć `true`
+//    2. W przeciwnym razie wypisz "Sorry kiddo, no can do." i zwróć `false`
+// 2. Napisz tę samą funkcję za pomocą `switch` statement
+
+// ```js
+// canRideRollerCoaster(17, 180); // false
+// canRideRollerCoaster(19, 150); // false
+// canRideRollerCoaster(13, 150); // false
+// canRideRollerCoaster(19, 190); // true
+// ```
+
+console.log("ZADANIE 13");
+let ageRide = 18;
+let growth = 160;
+function canRideRollerCoaster(ageRide, growth) {
+  if (ageRide >= 18 && growth >= 175) {
+    console.log("Can ride");
+    return true;
+  } else console.log("Sorry kiddo, no can do.");
+  return false;
+}
+
+console.log(canRideRollerCoaster(17, 180));
+console.log(canRideRollerCoaster(19, 150));
+console.log(canRideRollerCoaster(13, 150));
+console.log(canRideRollerCoaster(19, 190));
 
 // Zadanie 14.
+// Napisz funkcję `alphabeticalOrder`, która ustawia litery w podanym wyrazie w kolejności alfabetycznej.
 
+// ```js
+// alphabeticalOrder("javascript"); // 'aacijprstv'
+// ```
+
+console.log("ZADANIE 14");
+function alphabeticalOrder
 // Zadanie 15.
 
 // Zadanie 16.
