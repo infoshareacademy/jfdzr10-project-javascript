@@ -17,7 +17,6 @@ if (a === b) {
   console.log(false);
 }
 
-
 // Zadanie 2.
 // Sprawdź czy 0 jest równe wartości false przy użyciu obu sposobów porównania (== vs ===)
 
@@ -150,10 +149,12 @@ console.log("ZADANIE 9");
 function itemsInCart(e) {
   if (e > 1) {
     return `items`;
-  } else return `item`;
+  } else {
+    return `item`;
+  }
 }
-
-let itemsInCartExample = itemsInCart(1);
+let e = 1;
+let itemsInCartExample = itemsInCart(e);
 console.log(`You have ${e} ${itemsInCartExample} in your cart.`);
 
 // Zadanie 10.
@@ -167,11 +168,17 @@ console.log(`You have ${e} ${itemsInCartExample} in your cart.`);
 // Kolejność warunków ma znaczenie!
 // console.log("ZADANIE 10");
 
-// let ageOfPerson = prompt("Please enter your age");
+let ageOfPerson = prompt("Please enter your age");
 
-// if (ageOfPerson > 125 && ageOfPerson < 0) {
-//   alert("You provided incorrect age.");
-// }
+if (ageOfPerson > 125 || ageOfPerson < 0) {
+  console.log("You provided incorrect age.");
+} else if (ageOfPerson > 35) {
+  console.log("You could be a president!");
+} else if (ageOfPerson > 18) {
+  console.log("At least you can have a beer.");
+} else {
+  console.log("You cannot be a president and can't even drink beer");
+}
 
 // Zadanie 11.
 // Napisz funkcję `shouldTakeUmbrella`, ktore odpowie na pytanie czy wziąć ze sobą parasol.
@@ -182,22 +189,19 @@ console.log(`You have ${e} ${itemsInCartExample} in your cart.`);
 //    - isSummer: true/false
 // 3. Ustal swoje własne warunki, od jakich funkcja powinna nakazać wzięcie parasolki, a kiedy nie.
 console.log("ZADANIE 11");
-// do poprawki- jedna funkcja z 4 argumentami
-let weather = "isSummer";
-function shouldTakeUmbrella(weather) {
-  if ((weather = "isRaining" && "longTrip")) {
-    return "take umbrella";
-  } else return "dont take umbrella";
+function shouldTakeUmbrella(isRaining, hasJacket, longTrip, isSummer) {
+  if (isRaining == true || longTrip == true) {
+    console.log("Should take umbrella");
+    return true;
+  } else if (hasJacket == true || isSummer == true) {
+    console.log("Shouldn't take umbrella");
+    return false;
+  } else {
+    return false;
+  }
 }
-
-function shouldNotTakeUmbrella(weather) {
-  if ((weather = "isSummer" && "hasJacket")) {
-    return "dont take umbrella";
-  } else return "take umbrella";
-}
-
-console.log(shouldTakeUmbrella(weather));
-console.log(shouldNotTakeUmbrella(weather));
+let isSummer = true;
+console.log(shouldTakeUmbrella(isSummer));
 
 // Zadanie 12.
 // Napisz funkcję `isEqual`, która sprawdza czy przekazane liczby są równe:
@@ -211,7 +215,9 @@ console.log("ZADANIE 12");
 function isEqual(a, b) {
   if (a === b) {
     return true;
-   } else {return false;}
+  } else {
+    return false;
+  }
 }
 console.log(isEqual(2, 2));
 console.log(isEqual(2, 10));
@@ -238,8 +244,10 @@ function canRideRollerCoaster(age, height) {
   if (age > 18 && height > 175) {
     console.log("Can ride");
     return true;
-  } else {console.log("Sorry kiddo, no can do.");
-  return false;}
+  } else {
+    console.log("Sorry kiddo, no can do.");
+    return false;
+  }
 }
 
 console.log(canRideRollerCoaster(17, 180));
@@ -248,16 +256,15 @@ console.log(canRideRollerCoaster(13, 150));
 console.log(canRideRollerCoaster(19, 190));
 
 function canRideRollerCoasterSwitch(age, height) {
-
   switch (age > 18 && height > 175) {
-    case true: 
+    case true:
       console.log("Can ride");
       return true;
       break;
     case false:
       console.log("Sorry kiddo, no can do.");
       return false;
-      }
+  }
 }
 
 console.log(canRideRollerCoasterSwitch(17, 180));
@@ -265,39 +272,76 @@ console.log(canRideRollerCoasterSwitch(19, 150));
 console.log(canRideRollerCoasterSwitch(13, 150));
 console.log(canRideRollerCoasterSwitch(19, 190));
 
+// Zadanie 12.
+// Ćwiczenie na operatory logiczne.
 
-
-// Zadanie 14.
-// Napisz funkcję `alphabeticalOrder`, która ustawia litery w podanym wyrazie w kolejności alfabetycznej.
-
-// ```js
-// alphabeticalOrder("javascript"); // 'aacijprstv'
-// ```
-
-console.log("ZADANIE 14");
-function alphabeticalOrder
- 
+// Napisz funkcję isEqual, która sprawdza czy przekazane liczby są równe:
+// Dla wywołania isEqual(2, 2) zwraca true Dla wywołania isEqual(2, 10) zwraca false Dla wywołania isEqual(2000, 100) zwraca liczbę false Dla wywołania isEqual(100, '100') zwraca liczbę false
 
 // Zadanie 14.
 // Napisz funkcję alphabeticalOrder, która ustawia litery w podanym wyrazie w kolejności alfabetycznej.
 
 // alphabeticalOrder("javascript"); // 'aacijprstv'
+console.log("Zadanie 14");
+
+function alphabeticalOrder(str) {
+  return str.split("").sort().join("");
+}
+console.log(alphabeticalOrder("javascript"));
+
 // Zadanie 15.
 // Napisz funkcję reverseText, która odwraca kolejność liter w podanym wyrazie.
 
 // reverseText("javascript"); // 'tpircsavaj'
+console.log("Zadanie 15");
+function reverseText(str) {
+  return str.split("").reverse().join("");
+}
+console.log(reverseText("javascript"));
+
 // Zadanie 16.
 // Napisz funkcję getInitials, która zwróci inicjały z podanego imienia i nazwiska.
 
 // getInitials("Harry Potter"); // 'H.P.'
+
+console.log("Zadanie 16");
+function getInitials(str) {
+  const getInitials = str
+    .split(" ")
+    .map((word) => word.charAt(0))
+    .join("");
+
+  return getInitials;
+}
+
+console.log(getInitials("Harry Potter"));
+
 // Zadanie 17.
 // Napisz funkcję slugify, która zwróci podany ciąg znaków w formie tzw. "slug'a" (czyli wszystkie wyrazy z małej litery, połączone myślnikiem -)
 
 // slugify("Top 10 my favourite songs"); // top-10-my-favourite-songs
 // slugify("Name of my blog article"); // name-of-my-blog-article
+
+console.log("Zadanie 17");
+const slugify = (str) =>
+  str
+    .toLowerCase()
+    .trim()
+    .replace(/[\s_-]+/g, "-");
+
+console.log(slugify("Top 10 my favourite songs"));
+
 // Zadanie 18.
 // Napisz funkcję toUpperCase(), która zwróci każdy z wyrazów w tym ciągu znaków z powiększoną pierwszą literą.
 
 // toUpperCase("top 10 my favourite songs"); // Top 10 My Favourite Songs
-// toUpperCase("Name of my Blog article"); 
-// ()
+// toUpperCase("Name of my Blog article"); // Name Of My Blog Article
+
+console.log("Zadanie 18");
+const str = "top 10 my favourite songs";
+const arr = str.split(" ");
+for (let i = 0; i < arr.length; i++) {
+  arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+}
+const str2 = arr.join(" ");
+console.log(str2);
