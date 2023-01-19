@@ -16,7 +16,7 @@ if (a === b) {
 } else {
   console.log(false);
 }
-// === porównuje obie wartości i ich typ
+
 
 // Zadanie 2.
 // Sprawdź czy 0 jest równe wartości false przy użyciu obu sposobów porównania (== vs ===)
@@ -48,7 +48,7 @@ let userName = "Agata";
 let age = 18;
 let city = "Gdańsk";
 console.log(
-  `Our user name is ${userName} and is ${age} years old and lives in ${city}.`
+  `Our user's name is ${userName} and is ${age} years old and lives in ${city}.`
 );
 
 // Zadanie 4.
@@ -137,6 +137,8 @@ function getBiggerNumber(x, y) {
 let getBiggerNumberExample = getBiggerNumber(2, 7);
 console.log(getBiggerNumberExample);
 
+// co zrobić, jak liczby są równe Bartku?
+
 // Zadanie 9.
 // Napisz funkcję `itemsInCart()`, która zwróci odpowiednią gramatycznie liczbę przedmiotów w koszyku (item vs items).
 
@@ -150,8 +152,7 @@ function itemsInCart(e) {
     return `items`;
   } else return `item`;
 }
-let e = 1;
-// nie wiem, czt to let e jest potrzebne
+
 let itemsInCartExample = itemsInCart(1);
 console.log(`You have ${e} ${itemsInCartExample} in your cart.`);
 
@@ -181,6 +182,7 @@ console.log(`You have ${e} ${itemsInCartExample} in your cart.`);
 //    - isSummer: true/false
 // 3. Ustal swoje własne warunki, od jakich funkcja powinna nakazać wzięcie parasolki, a kiedy nie.
 console.log("ZADANIE 11");
+// do poprawki- jedna funkcja z 4 argumentami
 let weather = "isSummer";
 function shouldTakeUmbrella(weather) {
   if ((weather = "isRaining" && "longTrip")) {
@@ -209,11 +211,7 @@ console.log("ZADANIE 12");
 function isEqual(a, b) {
   if (a === b) {
     return true;
-  } else if (a < b) {
-    return false;
-  } else if (a > b) {
-    return false;
-  } else return false;
+   } else {return false;}
 }
 console.log(isEqual(2, 2));
 console.log(isEqual(2, 10));
@@ -236,18 +234,38 @@ console.log(isEqual(100, "100"));
 console.log("ZADANIE 13");
 let ageRide = 18;
 let growth = 160;
-function canRideRollerCoaster(ageRide, growth) {
-  if (ageRide >= 18 && growth >= 175) {
+function canRideRollerCoaster(age, height) {
+  if (age > 18 && height > 175) {
     console.log("Can ride");
     return true;
-  } else console.log("Sorry kiddo, no can do.");
-  return false;
+  } else {console.log("Sorry kiddo, no can do.");
+  return false;}
 }
 
 console.log(canRideRollerCoaster(17, 180));
 console.log(canRideRollerCoaster(19, 150));
 console.log(canRideRollerCoaster(13, 150));
 console.log(canRideRollerCoaster(19, 190));
+
+function canRideRollerCoasterSwitch(age, height) {
+
+  switch (age > 18 && height > 175) {
+    case true: 
+      console.log("Can ride");
+      return true;
+      break;
+    case false:
+      console.log("Sorry kiddo, no can do.");
+      return false;
+      }
+}
+
+console.log(canRideRollerCoasterSwitch(17, 180));
+console.log(canRideRollerCoasterSwitch(19, 150));
+console.log(canRideRollerCoasterSwitch(13, 150));
+console.log(canRideRollerCoasterSwitch(19, 190));
+
+
 
 // Zadanie 14.
 // Napisz funkcję `alphabeticalOrder`, która ustawia litery w podanym wyrazie w kolejności alfabetycznej.
@@ -258,10 +276,28 @@ console.log(canRideRollerCoaster(19, 190));
 
 console.log("ZADANIE 14");
 function alphabeticalOrder
+ 
+
+// Zadanie 14.
+// Napisz funkcję alphabeticalOrder, która ustawia litery w podanym wyrazie w kolejności alfabetycznej.
+
+// alphabeticalOrder("javascript"); // 'aacijprstv'
 // Zadanie 15.
+// Napisz funkcję reverseText, która odwraca kolejność liter w podanym wyrazie.
 
+// reverseText("javascript"); // 'tpircsavaj'
 // Zadanie 16.
+// Napisz funkcję getInitials, która zwróci inicjały z podanego imienia i nazwiska.
 
+// getInitials("Harry Potter"); // 'H.P.'
 // Zadanie 17.
+// Napisz funkcję slugify, która zwróci podany ciąg znaków w formie tzw. "slug'a" (czyli wszystkie wyrazy z małej litery, połączone myślnikiem -)
 
+// slugify("Top 10 my favourite songs"); // top-10-my-favourite-songs
+// slugify("Name of my blog article"); // name-of-my-blog-article
 // Zadanie 18.
+// Napisz funkcję toUpperCase(), która zwróci każdy z wyrazów w tym ciągu znaków z powiększoną pierwszą literą.
+
+// toUpperCase("top 10 my favourite songs"); // Top 10 My Favourite Songs
+// toUpperCase("Name of my Blog article"); 
+// ()
