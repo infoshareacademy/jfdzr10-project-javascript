@@ -56,3 +56,14 @@ function isEmail(email) {
 console.log(isEmail('malnutelka@gmail.com'));
 console.log(isEmail('mbanaszkiewicz.pl'));
 console.log(isEmail(123));
+
+//js with Kamil
+
+function min(a, b) {
+    let result = Math.min(a, b);
+    return result;
+    }
+    
+    console.log(min(2, 5));
+    console.log(min(3, -1));
+    console.log(min(1, 1));
