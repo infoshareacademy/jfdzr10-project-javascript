@@ -192,16 +192,11 @@ console.log("ZADANIE 11");
 function shouldTakeUmbrella(isRaining, hasJacket, longTrip, isSummer) {
   if (isRaining == true || longTrip == true) {
     console.log("Should take umbrella");
-    return true;
-  } else if (hasJacket == true || isSummer == true) {
-    console.log("Shouldn't take umbrella");
-    return false;
   } else {
-    return false;
+    console.log("Shouldn't take umbrella");
   }
 }
-let isSummer = true;
-console.log(shouldTakeUmbrella(isSummer));
+console.log(shouldTakeUmbrella(false, true, true, false));
 
 // Zadanie 12.
 // Napisz funkcję `isEqual`, która sprawdza czy przekazane liczby są równe:
@@ -272,12 +267,6 @@ console.log(canRideRollerCoasterSwitch(19, 150));
 console.log(canRideRollerCoasterSwitch(13, 150));
 console.log(canRideRollerCoasterSwitch(19, 190));
 
-// Zadanie 12.
-// Ćwiczenie na operatory logiczne.
-
-// Napisz funkcję isEqual, która sprawdza czy przekazane liczby są równe:
-// Dla wywołania isEqual(2, 2) zwraca true Dla wywołania isEqual(2, 10) zwraca false Dla wywołania isEqual(2000, 100) zwraca liczbę false Dla wywołania isEqual(100, '100') zwraca liczbę false
-
 // Zadanie 14.
 // Napisz funkcję alphabeticalOrder, która ustawia litery w podanym wyrazie w kolejności alfabetycznej.
 
@@ -305,16 +294,18 @@ console.log(reverseText("javascript"));
 // getInitials("Harry Potter"); // 'H.P.'
 
 console.log("Zadanie 16");
-function getInitials(str) {
-  const getInitials = str
-    .split(" ")
-    .map((word) => word.charAt(0))
-    .join("");
 
-  return getInitials;
+function getInitials(str) {
+  let words = str.split(" ");
+  console.log(words);
+  let initials = "";
+  for (let i = 0; i < words.length; i++) {
+    initials += words[i].charAt(0) + ".";
+  }
+  console.log(initials);
 }
 
-console.log(getInitials("Harry Potter"));
+console.log(getInitials("Harry Maria Potter Nowak"));
 
 // Zadanie 17.
 // Napisz funkcję slugify, która zwróci podany ciąg znaków w formie tzw. "slug'a" (czyli wszystkie wyrazy z małej litery, połączone myślnikiem -)
