@@ -125,8 +125,6 @@ canRideRollerCoaster(13, 150); // false
 canRideRollerCoaster(19, 190); // true
 ```
 
-## Metody na typach prostych
-
 ### Zadanie 14.
 
 Napisz funkcję `alphabeticalOrder`, która ustawia litery w podanym wyrazie w kolejności alfabetycznej.
