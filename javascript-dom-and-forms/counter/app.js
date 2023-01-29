@@ -13,9 +13,9 @@ buttonPlus.innerText = "+";
 let counter = 0;
 counterViewer.value = counter;
 
-bodyElement.append(buttonMinus);
-bodyElement.append(counterViewer);
 bodyElement.append(buttonPlus);
+bodyElement.append(counterViewer);
+bodyElement.append(buttonMinus);
 
 buttonMinus.addEventListener("click", (e) => {
   e.preventDefault();
