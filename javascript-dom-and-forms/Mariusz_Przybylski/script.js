@@ -33,11 +33,9 @@ button.innerText = "KLIKNIJ MNIE";
 document.body.append(button);
 
 const toggleBackgroundColor = () => {
-	if (!document.body.style.backgroundColor) {
-		document.body.style.backgroundColor = "#123123";
-	} else {
-		document.body.removeAttribute("style");
-	}
+	!document.body.style.backgroundColor
+		? (document.body.style.backgroundColor = "#123123")
+		: (document.body.style.backgroundColor = "");
 };
 
 button.addEventListener("click", toggleBackgroundColor);
