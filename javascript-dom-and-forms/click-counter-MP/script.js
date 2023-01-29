@@ -31,6 +31,4 @@ plusButton.addEventListener("click", increaseNumber);
 
 minusButon.addEventListener("click", decreaseNumber);
 
-bodyTag.append(plusButton);
-bodyTag.append(actualNumber);
-bodyTag.append(minusButon);
+bodyTag.append(plusButton, actualNumber, minusButon);
