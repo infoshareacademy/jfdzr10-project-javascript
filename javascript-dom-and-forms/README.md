@@ -2,7 +2,7 @@
 
 W tym zadaniu przećiwczymy dodawanie elementów do drzewa DOM, odczytywanie ich zawartości i właściwości, aktualizowanie elementów ich oraz usuwanie. Wykorzystamy też obsługę zdarzeń (eventy).
 
-### Zadanie
+## Zadanie nr 1 - Interakcja ze stroną
 
 ---
 
@@ -85,3 +85,11 @@ Przenieście skrypt na sam dół i sprawdźcie, czy tym razem console.log(header
 ---
 
 #### <<< tutaj robimy commita aktualnych zmian i push na repozytorium zdalne >>>
+
+## Zadanie nr 2 - Licznik
+
+Stwórz licznik kliknięć, który będzie składał się z 2 przycisków ('+' i '-') oraz tekstu, który będzie wskazywał aktualną liczbę. Kliknięcie na '+' zwiększa liczbe o 1, kliknięcie na '-' zmniejsza liczbę o 1.
+
+Do stworzenia przycisków, tekstu i zarządzania kliknięciami wykorzustujemy JSa. Umiejscowienie elementów: przycisk '+' po lewej stronie, w środku liczba, po prawej stronie przycisk '-'.
+
+Style do odpowiedniego ułożenia elementów dodaj również za pomocą JSa.
