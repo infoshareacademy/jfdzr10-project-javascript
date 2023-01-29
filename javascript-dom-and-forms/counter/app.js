@@ -2,8 +2,10 @@ const bodyElement = document.querySelector("body");
 const buttonPlus = document.createElement("button");
 const counterViewer = document.createElement("input");
 const buttonMinus = document.createElement("button");
+
 counterViewer.setAttribute("id", "counter");
 counterViewer.setAttribute("disabled", true);
+
 buttonMinus.setAttribute("id", "minus");
 buttonPlus.setAttribute("id", "plus");
 
@@ -17,12 +19,13 @@ bodyElement.append(buttonPlus);
 bodyElement.append(counterViewer);
 bodyElement.append(buttonMinus);
 
-buttonMinus.addEventListener("click", (e) => {
-  e.preventDefault();
-  counterViewer.value = counter--;
-});
+const minusOne = () => {
+  counterViewer.value = --counter;
+};
+const plusOne = () => {
+  counterViewer.value = ++counter;
+};
 
-buttonPlus.addEventListener("click", (e) => {
-  e.preventDefault();
-  counterViewer.value = counter++;
-});
+buttonMinus.addEventListener("click", minusOne);
+
+buttonPlus.addEventListener("click", plusOne);

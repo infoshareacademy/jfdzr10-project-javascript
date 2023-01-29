@@ -31,13 +31,12 @@ buttonElement.classList.add("toggleBackground");
 
 bodyElement.append(buttonElement);
 
-buttonElement.addEventListener("click", (e) => {
-  const toggleBackgroundColor = () => {};
+const toggleBackgroundColor = () => {
   if (!bodyElement.style.backgroundColor.length) {
     bodyElement.style.backgroundColor = "#123123";
   } else {
     bodyElement.style.backgroundColor = "";
   }
-  e.preventDefault();
-  toggleBackgroundColor();
-});
+};
+
+buttonElement.addEventListener("click", toggleBackgroundColor);
