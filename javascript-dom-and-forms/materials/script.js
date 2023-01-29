@@ -35,3 +35,14 @@ header.classList.remove("header");
 header.remove();
 
 //8
+function toggleBackgroundColor() {
+  !document.body.backgroundColor
+    ? (body.style.backgroundColor = "#123123")
+    : (body.style.backgroundColor = "");
+}
+
+const toggleButton = document.createElement("button");
+toggleElement.innerText = "kliknij mnie";
+toggleButton.addEventListener("click", toggleBackgroundColor);
+
+body.append;
