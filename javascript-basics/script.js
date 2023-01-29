@@ -97,32 +97,3 @@ console.log(adult);
 // Zadanie 17.
 
 // Zadanie 18.
-// ---------------------------------------------
-// ZAJĘCIA 2
-
-//ZADANIE 1.
-
-
-const ticktacktoe = [
-  ["x", "o", "x"],
-  ["x", "x", "o"],
-  ["o", "**", "o"],
-];
-
-console.log(ticktacktoe[2][1]);
-
-//Zadanie 2
-
-
-function multiplyBy2(array) {
-  const output = [];
-  for (let i=0; i < array.length; i++){
-    output.push(array[i] * 2);
-  }
-  return output;
-}
-console.log(multiplyBy2([1, 5, 8, 21]));
-console.log(multiplyBy2([17, 123124, 3]));
-console.log(multiplyBy2([17, 123124, 3]));
-
-//Zadanie 3
