@@ -1,6 +1,5 @@
-const errorMessage = document.querySelector("span");
-
 const inputValidator = (content) => {
+	const errorMessage = document.querySelector("span");
 	if (content) {
 		errorMessage.classList.add("hidden");
 		errorMessage.classList.remove("error");
