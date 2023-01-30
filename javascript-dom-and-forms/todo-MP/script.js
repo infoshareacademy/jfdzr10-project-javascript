@@ -11,14 +11,12 @@ const inputValidator = (content) => {
 	return false;
 };
 
-const createTodoItem = (todo) => {
-	const todoList = document.querySelector("#todoList");
+const handleDeleteItem = (e) => {
+	const todoItem = e.target;
 
-	const todoItem = document.createElement("li");
-	todoItem.setAttribute("id", todo.id);
-	todoItem.textContent = todo.value;
-
-	todoList.appendChild(todoItem);
+	setTimeout(() => {
+		todoItem.remove();
+	}, 2000);
 };
 
 const handleAddTodo = (e) => {
@@ -37,8 +35,22 @@ const handleAddTodo = (e) => {
 		value: todoContent,
 	};
 
-	createTodoItem(todo);
-	form.reset();
+	setTimeout(() => {
+		createTodoItem(todo);
+		form.reset();
+	}, 2000);
+};
+
+const createTodoItem = (todo) => {
+	const todoList = document.querySelector("#todoList");
+
+	const todoItem = document.createElement("li");
+	todoItem.setAttribute("id", todo.id);
+	todoItem.textContent = todo.value;
+
+	todoList.appendChild(todoItem);
+
+	todoItem.addEventListener("click", handleDeleteItem);
 };
 
 document.querySelector("form").addEventListener("submit", handleAddTodo);
