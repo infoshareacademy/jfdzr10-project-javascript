@@ -1,3 +1,5 @@
+import { addItem, deleteItem } from "./storage.js";
+
 const inputValidator = (content) => {
 	const errorMessage = document.querySelector("span");
 	if (content) {
@@ -12,9 +14,11 @@ const inputValidator = (content) => {
 
 const handleDeleteItem = (e) => {
 	const todoItem = e.target;
+	const todoId = todoItem.id;
 
 	setTimeout(() => {
 		todoItem.remove();
+		deleteItem(todoId);
 	}, 2000);
 };
 
@@ -36,11 +40,12 @@ export const handleAddTodo = (e) => {
 
 	setTimeout(() => {
 		createTodoItem(todo);
+		addItem(todo);
 		form.reset();
 	}, 2000);
 };
 
-const createTodoItem = (todo) => {
+export const createTodoItem = (todo) => {
 	const todoList = document.querySelector("#todoList");
 
 	const todoItem = document.createElement("li");

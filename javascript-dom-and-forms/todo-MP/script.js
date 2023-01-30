@@ -1,5 +1,11 @@
-import { initializeStore } from "./storage.js";
-import { handleAddTodo } from "./dom.js";
+import { initializeStore, getStore } from "./storage.js";
+import { handleAddTodo, createTodoItem } from "./dom.js";
 
-document.querySelector("form").addEventListener("submit", handleAddTodo);
-document.addEventListener("DOMContentLoaded", initializeStore);
+const initializeApp = () => {
+	initializeStore();
+	const todos = getStore();
+	todos.forEach((todo) => createTodoItem(todo));
+	document.querySelector("form").addEventListener("submit", handleAddTodo);
+};
+
+document.addEventListener("DOMContentLoaded", initializeApp);
