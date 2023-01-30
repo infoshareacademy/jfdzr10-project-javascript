@@ -1,5 +1,5 @@
-import { initializeStore, getStore } from "./storage.js";
-import { handleAddTodo, createTodoItem } from "./dom.js";
+import { initializeStore, getStore } from "./modules/storage.js";
+import { handleAddTodo, createTodoItem } from "./modules/dom.js";
 
 const initializeApp = () => {
 	initializeStore();
