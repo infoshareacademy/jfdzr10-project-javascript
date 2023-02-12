@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 2em;
+}
+button {
+  padding: 15px;
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+}
+.toast-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100vh;
+}
+.academyLeaf {
+  padding: 15px;
+  background-color: #666;
+  color: white;
+  border-radius: 10px;
+  margin: 10px 0;
+}
