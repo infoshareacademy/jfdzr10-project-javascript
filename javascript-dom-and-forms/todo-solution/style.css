@@ -1,0 +1,17 @@
+body {
+  font-family: sans-serif;
+}
+
+.error {
+  display: block;
+  color: red;
+  font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+button {
+  display: block;
+}

@@ -131,4 +131,29 @@ const people = [
     age: 25,
   },
 ];
+let tab = []
+const  test = (test) => {
+if(!Array.isArray(test)) return 'to nie jest tablica'
 
+for()
+}
+
+const arr = ['1','2', '3']
+const tes2 = (array) => {
+  let arrLength = array.length
+  switch (arrLength) {
+    case 3:
+ return 'yes'
+  
+    default:
+      return 'black'
+  }
+}
+
+console.log(test(arr))
+
+const array = [1, 2, 3, 4]
+
+[1, 2, 3, 4].reduce((a, b) => a + b)
+reduce((a,b) => a + b)
+array[0] + array[1]
