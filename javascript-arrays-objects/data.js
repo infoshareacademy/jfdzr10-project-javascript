@@ -131,32 +131,29 @@ const people = [
 		age: 25,
 	},
 ];
+let tab = []
+const  test = (test) => {
+if(!Array.isArray(test)) return 'to nie jest tablica'
 
-//Zadanie 6
-const sortedPeople = people.sort((a, b) => {
-	const nameA = a.last_name.toUpperCase();
-	const nameB = b.last_name.toUpperCase();
-	if (nameA < nameB) {
-		return -1;
-	}
-	if (nameA > nameB) {
-		return 1;
-	}
-
-	// names must be equal
-	return 0;
-});
-
-//console.log(sortedPeople);
-
-//Zadanie 11
-function showOnlyUsersWithRace(userRace) {
-	people.filter((element) => {
-		if (element.race === userRace) {
-			console.log(element);
-		}
-	});
+for()
 }
 
-showOnlyUsersWithRace("Cambodian");
-showOnlyUsersWithRace(1);
+const arr = ['1','2', '3']
+const tes2 = (array) => {
+  let arrLength = array.length
+  switch (arrLength) {
+    case 3:
+ return 'yes'
+  
+    default:
+      return 'black'
+  }
+}
+
+console.log(test(arr))
+
+const array = [1, 2, 3, 4]
+
+[1, 2, 3, 4].reduce((a, b) => a + b)
+reduce((a,b) => a + b)
+array[0] + array[1]
