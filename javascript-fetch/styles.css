@@ -1,0 +1,23 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  border: 3px solid rgb(236, 236, 37);
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #4caf50;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  th,
+  td {
+    display: block;
+    width: 100%;
+  }
+}
