@@ -1,7 +1,8 @@
 const pokemonGrid = document.querySelector(".pokemon-grid");
+const URL = "https://pokeapi.co/api/v2/pokemon";
 
 async function fetchPokemon() {
-  const response = await fetch("https://pokeapi.co/api/v2/pokemon");
+  const response = await fetch(URL);
   const data = await response.json();
   const pokemon = data.results;
 
@@ -21,8 +22,16 @@ async function fetchPokemon() {
     pokemonElement.appendChild(pokemonImage);
     pokemonElement.appendChild(pokemonName);
 
+    // pokemonElement.addEventListener("click", () => {
+    //   console.log(`Kliknięto na kartę pokemona: ${pokemonName}`);
+    // });
+
     pokemonGrid.appendChild(pokemonElement);
   });
 }
 
 fetchPokemon();
+
+const URL_POKEMON_INFO = "https://pokeapi.co/api/v2/pokemon/3";
+
+//dodanie addEventListenera na diva z pockemonem

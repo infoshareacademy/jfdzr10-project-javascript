@@ -1,8 +1,7 @@
 .pokemon-grid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: 20px;
-  height: fit-content;
 }
 
 .pokemon {
@@ -31,10 +30,30 @@
   width: 50%;
   height: 50%;
   background-color: rgb(78, 78, 16);
+  /* object-fit: cover; */
 }
 
 .pokemon-name {
   font-weight: bold;
   margin-top: 10px;
   font-size: larger;
+}
+
+/* Responsywność */
+@media only screen and (max-width: 768px) {
+  .pokemon-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .pokemon-card img {
+    height: 150px;
+  }
+
+  .pokemon-card h2 {
+    font-size: 1rem;
+  }
+
+  .pokemon-card p {
+    font-size: 0.8rem;
+  }
 }
